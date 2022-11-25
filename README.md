@@ -25,3 +25,22 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+# Notizen
+
+## Hinsichtlich dem Architekturdiagram:
+
+Hier wäre es super, wenn du die einzelnen Komponenten des Coffee Shops, die eingesetzten Technologien und 
+deren Zusammenspiel dokumentieren würdest ähnlich einem Sequenzdiagram.
+
+## Für die Backend-Daten:
+
+Es wäre super, wenn du einen Objektspeicher hast, von dem aus die Client-Seite CRUD-Operationen durchführen kann.
+
+## Zugriff:
+
+Wir verwenden bei uns den Duende Identity Server als Framework für ein Rollen- und Rechtemanagementsystem 
+sowie zur Absicherung unserer Applikationen. Für die Testaufgabe musst du das nicht implementieren. 
+Wenn du die Zeit hast, wäre es super wenn du konzeptionell beschreiben würdest, wie das Rechtemanagement 
+in dem Beispiel mit Kunde und Barista funktionieren würde.
