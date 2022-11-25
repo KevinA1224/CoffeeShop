@@ -1,0 +1,26 @@
+h1 {
+    text-align: center;
+}
+
+nav {
+    padding: 0 .5em;
+    margin: 2.5em 0 5em 0;
+}
+
+a {
+    background-color: #614901;
+    border-radius: 2px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    min-width: 100px;
+    margin:  0 .5em 0 0;
+    box-sizing: border-box;
+}
+  
+  a:hover {
+    background-color: #115ba4;
+  }
