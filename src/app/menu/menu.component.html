@@ -1,15 +1,20 @@
 <h2>Our Menu</h2>
+<div class="content">
+  <ul class="items">
+    <li *ngFor="let item of items">
 
-<ul class="items">
-  <li *ngFor="let item of items">
+      <div class="mitems">
+        <span class="badge">{{item.id}}</span>
+        <span class="name">{{item.name}}</span>
+        <span class="price">{{item.price + '$'}}</span>
+        <button type="button" (click)="onSelect(item)" [class.selected]="item === selectedItem">Select</button>
+        <button type="button">Add</button>
+      </div>
 
-    <button type="button" (click)="onSelect(item)" [class.selected]="item === selectedItem">
-      <span class="badge">{{item.id}}</span>
-      <span class="name">{{item.name}}</span>
-      <span class="price">{{item.price + '$'}}</span>
-    </button>
+    </li>
+  </ul>
 
-  </li>
-</ul>
+  <app-menu-items [item]="selectedItem"></app-menu-items>
+  <app-messages></app-messages>
 
-<app-menu-items [item]="selectedItem"></app-menu-items>
+</div>
