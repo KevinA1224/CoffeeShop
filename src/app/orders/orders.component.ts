@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuItem } from '../MenuItem';
-import { MenuItemService } from '../menu-item.service';
+import { OrderItem } from '../OrderItem';
+import { OrderService } from '../order.service';
 
 @Component({
   selector: 'app-orders',
@@ -9,16 +9,17 @@ import { MenuItemService } from '../menu-item.service';
 })
 export class OrdersComponent implements OnInit {
 
-  items: MenuItem[] = [];
+  orders: OrderItem[] = [];
 
-  constructor(private menuItemService: MenuItemService) { }
+  constructor(private orderService: OrderService) { }
 
   ngOnInit(): void {
     this.getMenuItems();
   }
 
   getMenuItems(): void {
-    this.menuItemService.getMenuItems().subscribe(items => this.items = items.slice(1, 5));
+    this.orderService.getOrderItems().subscribe(orders => this.orders = orders);
+    //this.orderService.getOrderItems().subscribe(items => this.orders = items.slice(1, 5));
   }
 
 }

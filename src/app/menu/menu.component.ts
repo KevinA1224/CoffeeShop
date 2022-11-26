@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from '../MenuItem';
-import { MenuItemService } from '../menu-item.service';
+import { MenuService } from '../menu.service';
 import { MessageService } from '../message.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class MenuComponent implements OnInit {
 
   selectedItem?: MenuItem;
 
-  constructor(private menuItemService: MenuItemService, private messageService: MessageService) { }
+  constructor(private menuService: MenuService, private messageService: MessageService) { }
 
   ngOnInit(): void {
     this.getHeroes();
@@ -26,7 +26,7 @@ export class MenuComponent implements OnInit {
   }
 
   getHeroes(): void {
-    this.menuItemService.getMenuItems()
+    this.menuService.getMenuItems()
       .subscribe(items => this.items = items);
   }
 

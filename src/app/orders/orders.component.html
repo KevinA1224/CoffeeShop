@@ -1,10 +1,9 @@
 <h2>List of Orders</h2>
 <div class="orders">
-    <a *ngFor="let item of items">
-        <span>{{item.name}} </span><hr>
-        <span>{{item.price}} $ </span><hr>
-        <span>Amount: 2 </span><hr>
-        <span>Total: XX$ </span><hr>
-        <span>Status: Open</span>
+    <a *ngFor="let order of orders">
+        <span>ID: {{order.id}} </span><hr>
+        <span>Total: {{order.total}} $ </span><hr>
+        <span>{{order.itemList}} </span><hr>
+        <span>Status: {{order.status}}</span>
     </a>
 </div>

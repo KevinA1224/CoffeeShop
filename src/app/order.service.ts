@@ -1,0 +1,38 @@
+import { Injectable } from '@angular/core';
+import { OrderItem } from './OrderItem';
+import { Observable, of } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { catchError, map, tap } from 'rxjs/operators';
+
+
+@Injectable({
+  providedIn: 'root'
+})
+export class OrderService {
+
+  getOrderItems(): Observable<OrderItem[]> {
+    return this,this.http.get<OrderItem[]>(this.ordersUrl)
+    .pipe(
+      //tap(_ => this.log('fetched items')),
+      catchError(this.handleError<OrderItem[]>('getOrderItems', []))
+    );
+  }
+
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+  
+      // TODO: send the error to remote logging infrastructure
+      console.error(error); // log to console instead
+  
+      // TODO: better job of transforming error for user consumption
+      //this.log(`${operation} failed: ${error.message}`);
+  
+      // Let the app keep running by returning an empty result.
+      return of(result as T);
+    };
+  }
+
+  private ordersUrl = 'api/orders'
+
+  constructor(private http: HttpClient) { }
+}
