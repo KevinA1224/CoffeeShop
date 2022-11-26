@@ -14,7 +14,7 @@ export class MenuService {
   getMenuItems(): Observable<MenuItem[]> {
     return this.http.get<MenuItem[]>(this.menuUrl)
     .pipe(
-      tap(_ => this.log('fetched items')),
+      //tap(_ => this.log('fetched items')),
       catchError(this.handleError<MenuItem[]>('getMenuItems', []))
     );
   }
@@ -26,7 +26,7 @@ export class MenuService {
       console.error(error); // log to console instead
   
       // TODO: better job of transforming error for user consumption
-      this.log(`${operation} failed: ${error.message}`);
+      //this.log(`${operation} failed: ${error.message}`);
   
       // Let the app keep running by returning an empty result.
       return of(result as T);
@@ -35,9 +35,9 @@ export class MenuService {
 
   private menuUrl = 'api/items';
 
-  private log(message: string) {
+  /* private log(message: MenuItem) {
     this.messageService.add(`MenuItemService: ${message}`);
-  }
+  } */
 
   constructor(
     private http: HttpClient,

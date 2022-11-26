@@ -22,7 +22,7 @@ export class MenuComponent implements OnInit {
 
   onSelect(item: MenuItem): void {
     this.selectedItem = item;
-    this.messageService.add(`name=${item.name}`);
+    this.messageService.add(item);
   }
 
   getHeroes(): void {
