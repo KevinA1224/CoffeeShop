@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OrderItem } from '../OrderItem';
 import { OrderService } from '../order.service';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-orders',
@@ -9,9 +10,11 @@ import { OrderService } from '../order.service';
 })
 export class OrdersComponent implements OnInit {
 
-  orders: OrderItem[] = [];
+  orders = this.messageService.orders;
 
-  constructor(private orderService: OrderService) { }
+  constructor(
+    private orderService: OrderService,
+    private messageService: MessageService) { }
 
   ngOnInit(): void {
     this.getMenuItems();
@@ -19,7 +22,6 @@ export class OrdersComponent implements OnInit {
 
   getMenuItems(): void {
     this.orderService.getOrderItems().subscribe(orders => this.orders = orders);
-    //this.orderService.getOrderItems().subscribe(items => this.orders = items.slice(1, 5));
   }
 
 }

@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 import { MenuItem } from './MenuItem';
+import { OrderItem } from './OrderItem';
+
 
 @Injectable({
   providedIn: 'root'
@@ -9,14 +11,25 @@ import { MenuItem } from './MenuItem';
 export class MessageService {
 
   messages: MenuItem[] = [];
+  orders: OrderItem[] = [];
   total: number = 0;
+  tmpItemList: string[] = [];
+  orderID: number = 0;
 
   add(message: MenuItem) {
     this.messages.push(message);
     this.calcTotal(this.messages);
+    //this.output();
+    //console.log(this.output());
   }
 
-  clear() {
+  clear(): void {
+    this.messages = [];
+  }
+
+  resetOutput(): void {
+    this.tmpItemList = [];
+    this.orderID += 1;
     this.messages = [];
   }
 
@@ -27,5 +40,13 @@ export class MessageService {
     });
     this.total = total;
   }
+
+  output(){
+    this.messages.forEach((message) => {
+      this.tmpItemList.push(message.name); 
+    });
+    return {id: this.orderID, itemList: this.tmpItemList, total: this.total, status: 'open'};
+  }
+
 
 }

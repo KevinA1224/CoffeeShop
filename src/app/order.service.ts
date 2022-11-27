@@ -10,6 +10,13 @@ import { catchError, map, tap } from 'rxjs/operators';
 })
 export class OrderService {
 
+  addOrder(order: OrderItem): Observable<OrderItem> {
+    return this.http.post<OrderItem>(this.ordersUrl, order, this.httpOptions)
+    .pipe(
+      catchError(this.handleError<OrderItem>('addOrder'))
+    );
+  }
+
   getOrderItems(): Observable<OrderItem[]> {
     return this,this.http.get<OrderItem[]>(this.ordersUrl)
     .pipe(
@@ -32,7 +39,11 @@ export class OrderService {
     };
   }
 
-  private ordersUrl = 'api/orders'
+  private ordersUrl = 'api/orders';
+
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
 
   constructor(private http: HttpClient) { }
 }

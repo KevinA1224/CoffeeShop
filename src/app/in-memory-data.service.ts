@@ -14,19 +14,10 @@ export class InMemoryDataService implements InMemoryDbService {
       {id: 3, name: 'Hot Chocolate', price: 2.90},
       {id: 4, name: 'Cappuccino', price: 3.00},
       {id: 5, name: 'Mocaccino', price: 3.10},
-      {id: 6, name: 'Latte', price: 2.80},
-      { id: 12, name: 'Dr. Nice', price: 2.20 },
-      { id: 13, name: 'Bombasto', price: 2.30 },
-      { id: 14, name: 'Celeritas', price: 2.40 },
-      { id: 15, name: 'Magneta', price: 2.50 },
-      { id: 16, name: 'RubberMan', price: 2.60 },
-      { id: 17, name: 'Dynama', price: 2.70 },
-      { id: 18, name: 'Dr. IQ', price: 2.80 },
-      { id: 19, name: 'Magma', price: 2.90 },
-      { id: 20, name: 'Tornado', price: 3.00 }
+      {id: 6, name: 'Latte', price: 2.80}
     ];
     const orders = [
-      {id: 1, itemList: ['Coffee', 'Espresso'], total: 5.50, status: 'open'}
+      {id: 99, itemList: ['Coffee', 'Espresso'], total: 5.50, status: 'open'}
     ];
     return {items, orders};
   }

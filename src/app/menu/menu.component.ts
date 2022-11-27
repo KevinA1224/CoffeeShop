@@ -17,7 +17,7 @@ export class MenuComponent implements OnInit {
   constructor(private menuService: MenuService, private messageService: MessageService) { }
 
   ngOnInit(): void {
-    this.getHeroes();
+    this.getMenuItems();
   }
 
   onSelect(item: MenuItem): void {
@@ -25,7 +25,7 @@ export class MenuComponent implements OnInit {
     this.messageService.add(item);
   }
 
-  getHeroes(): void {
+  getMenuItems(): void {
     this.menuService.getMenuItems()
       .subscribe(items => this.items = items);
   }

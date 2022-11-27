@@ -1,22 +1,23 @@
 <div *ngIf="messageService.messages.length">
 
-        <h2>Messages</h2>
-        <button type="button" class="clear" (click)="messageService.clear()">
-        Clear messages
-        </button>
+  <h2>Messages</h2>
+  <button type="button" class="clear" (click)="messageService.clear()">
+  Clear messages
+  </button>
+  <button type="button" (click)="addOrder()">AddOrder</button>
 
-        <table *ngIf="messageService.messages">
-                <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Price</th>
-                </tr>
-        
-                <tr *ngFor='let message of messageService.messages'>
-                        <th>{{message.id}}</th>
-                        <th>{{message.name}}</th>
-                        <th>{{message.price | currency: 'USD'}}</th>
-                </tr>
-        </table>
-        <div>Total: {{messageService.total | currency: 'USD'}}</div>
+  <table *ngIf="messageService.messages">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Price</th>
+    </tr>
+
+    <tr *ngFor='let message of messageService.messages'>
+      <th>{{message.id}}</th>
+      <th>{{message.name}}</th>
+      <th>{{message.price | currency: 'USD'}}</th>
+    </tr>
+  </table>
+  <div>Total: {{messageService.total | currency: 'USD'}}</div>
 </div>
