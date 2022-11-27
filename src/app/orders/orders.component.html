@@ -1,9 +1,16 @@
 <h2>List of Orders</h2>
 <div class="orders">
-    <a *ngFor="let order of orders">
+    <a [class]="order.status" *ngFor="let order of orders">
         <span>ID: {{order.id}} </span><hr>
-        <span>Total: {{order.total}} $ </span><hr>
+        <span>Total: {{order.total | currency: 'USD'}}</span><hr>
         <span>{{order.itemList}} </span><hr>
-        <span>Status: <button>{{order.status}}</button></span>
+        <mat-form-field>
+          <mat-label>{{order.status}}</mat-label>
+          <mat-select (selectionChange)="onChange($event, order)">
+            <mat-option *ngFor="let status of statusList" [value]="status">
+              {{status}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
     </a>
 </div>

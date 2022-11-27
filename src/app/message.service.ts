@@ -45,7 +45,7 @@ export class MessageService {
     this.messages.forEach((message) => {
       this.tmpItemList.push(message.name); 
     });
-    return {id: this.orderID, itemList: this.tmpItemList, total: this.total, status: 'open'};
+    return {id: this.orderID, itemList: this.tmpItemList, total: this.total, status: 'Open'};
   }
 
 

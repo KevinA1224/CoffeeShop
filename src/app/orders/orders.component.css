@@ -19,13 +19,13 @@ h2 {
   }
   
   a {
-    background-color: #3f525c;
+    background-color: #ddd;
     border-radius: 2px;
     padding: 1rem;
     font-size: 1.2rem;
     text-decoration: none;
     display: inline-block;
-    color: #fff;
+    color: #000;
     text-align: center;
     width: 100%;
     min-width: 70px;
@@ -46,5 +46,17 @@ h2 {
   }
   
   a:hover {
-    background-color: #000;
+    background-color: #eee;
+  }
+
+  .Open {
+    background-color: #ddd;
+  }
+
+  .Processing {
+    background-color: rgb(230, 220, 170);
+  }
+
+  .Closed {
+    background-color: rgb(180, 230, 170);
   }

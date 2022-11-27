@@ -17,7 +17,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {id: 6, name: 'Latte', price: 2.80}
     ];
     const orders = [
-      {id: 99, itemList: ['Coffee', 'Espresso'], total: 5.50, status: 'open'}
+      {id: 99, itemList: ['Coffee', 'Espresso'], total: 5.50, status: 'Open'}
     ];
     return {items, orders};
   }

@@ -20,8 +20,14 @@ export class OrderService {
   getOrderItems(): Observable<OrderItem[]> {
     return this,this.http.get<OrderItem[]>(this.ordersUrl)
     .pipe(
-      //tap(_ => this.log('fetched items')),
       catchError(this.handleError<OrderItem[]>('getOrderItems', []))
+    );
+  }
+
+  updateOrder(order: OrderItem): Observable<any> {
+    return this.http.put(this.ordersUrl, order, this.httpOptions)
+    .pipe(
+      catchError(this.handleError<any>('updateHero'))
     );
   }
 

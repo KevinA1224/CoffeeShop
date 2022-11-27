@@ -11,6 +11,8 @@ import { MessageService } from '../message.service';
 export class OrdersComponent implements OnInit {
 
   orders = this.messageService.orders;
+  statusList: any[] = ['Open', 'Processing', 'Closed'];
+  selectedStatus?: string;
 
   constructor(
     private orderService: OrderService,
@@ -22,6 +24,16 @@ export class OrdersComponent implements OnInit {
 
   getMenuItems(): void {
     this.orderService.getOrderItems().subscribe(orders => this.orders = orders);
+  }
+
+  onChange(event: any, order: OrderItem) {
+    //this.selectedStatus = event.value;
+    order.status = event.value;
+    //console.log(order);
+    this.orderService.updateOrder(order)
+    .subscribe(() => {
+      this.orders;
+    });
   }
 
 }
