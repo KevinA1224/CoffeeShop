@@ -9,12 +9,14 @@ import { MenuItem } from './MenuItem';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const items = [
-      {id: 1, name: 'Espresso', price: 3.20},
-      {id: 2, name: 'Black Coffee', price: 2.70},
-      {id: 3, name: 'Hot Chocolate', price: 2.90},
-      {id: 4, name: 'Cappuccino', price: 3.00},
-      {id: 5, name: 'Mocaccino', price: 3.10},
-      {id: 6, name: 'Latte', price: 2.80}
+      {id: 1, name: 'Espresso', price: 3.20, image: './assets/espresso.jpg'},
+      {id: 2, name: 'Black Coffee', price: 2.70, image: './assets/black_coffee.jpg'},
+      {id: 3, name: 'Hot Chocolate', price: 2.90, image: './assets/hot_chocolate.jpg'},
+      {id: 4, name: 'Cappuccino', price: 3.00, image: './assets/cappuccino.jpg'},
+      {id: 5, name: 'Frappé', price: 3.10, image: './assets/frappe.jpg'},
+      {id: 6, name: 'Latte', price: 2.80, image: './assets/latte.jpg'},
+      {id: 7, name: 'Brownie', price: 3.00, image: './assets/brownie.jpg'},
+      {id: 8, name: 'Cupcake', price: 2.80, image: './assets/cupcake.jpg'}
     ];
     const orders = [
       {id: 90, itemList: ['Coffee', 'Espresso'], total: 5.50, status: 'Open'},

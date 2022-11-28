@@ -6,8 +6,8 @@
         <mat-card-title>{{item.name}}</mat-card-title>
         <!-- <mat-card-subtitle class="badge">{{item.id}}</mat-card-subtitle> -->
       </mat-card-header>
+      <img mat-card-image src={{item.image}} alt="Image of Menu Item">
       <mat-card-content class="inner">
-        <span>{{item.name}}&nbsp;</span>
         <span>{{item.price | currency: 'USD'}}</span>
       </mat-card-content>
       <mat-card-actions class="inner">
@@ -16,5 +16,7 @@
     </mat-card>
   </div>
   <!-- <app-menu-items [item]="selectedItem"></app-menu-items> -->
+</div>
+<div class="content">
   <app-messages></app-messages>
 </div>
