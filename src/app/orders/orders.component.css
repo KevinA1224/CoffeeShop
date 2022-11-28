@@ -1,11 +1,9 @@
-/* DashboardComponent's private CSS styles */
-
-h2 {
+h1 {
     text-align: center;
   }
   
   .orders {
-    padding: 0;
+    padding: 1em;
     margin: auto;
     max-width: 1000px;
   
@@ -13,23 +11,23 @@ h2 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-content: flex-start;
     align-items: flex-start;
   }
   
-  a {
+  .card {
     background-color: #ddd;
     border-radius: 2px;
-    padding: 1rem;
-    font-size: 1.2rem;
+    padding: 1.5rem;
     text-decoration: none;
     display: inline-block;
     color: #000;
-    text-align: center;
+    text-align: left;
     width: 100%;
-    min-width: 70px;
-    margin: .5rem auto;
+    min-width: 100px;
+    max-width: 200px;
+    margin: 1rem .5rem;
     box-sizing: border-box;
   
     /* flexbox */
@@ -37,26 +35,28 @@ h2 {
     flex: 0 1 auto;
     align-self: auto;
   }
-  
-  @media (min-width: 600px) {
-    a {
-      width: 18%;
-      box-sizing: content-box;
-    }
+
+  .items {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+    overflow: auto;
   }
   
-  a:hover {
+  .card:hover {
     background-color: #eee;
   }
 
-  .Open {
-    background-color: #ddd;
+  .orders .Open {
+    background-color: #fefefe;
   }
 
-  .Processing {
+  .orders .Processing {
     background-color: rgb(230, 220, 170);
   }
 
-  .Closed {
+  .orders .Closed {
     background-color: rgb(180, 230, 170);
   }

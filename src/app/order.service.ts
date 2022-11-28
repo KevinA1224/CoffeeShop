@@ -27,7 +27,7 @@ export class OrderService {
   updateOrder(order: OrderItem): Observable<any> {
     return this.http.put(this.ordersUrl, order, this.httpOptions)
     .pipe(
-      catchError(this.handleError<any>('updateHero'))
+      catchError(this.handleError<any>('updateOrder'))
     );
   }
 

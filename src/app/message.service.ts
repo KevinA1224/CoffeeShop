@@ -19,8 +19,6 @@ export class MessageService {
   add(message: MenuItem) {
     this.messages.push(message);
     this.calcTotal(this.messages);
-    //this.output();
-    //console.log(this.output());
   }
 
   clear(): void {

@@ -27,9 +27,7 @@ export class OrdersComponent implements OnInit {
   }
 
   onChange(event: any, order: OrderItem) {
-    //this.selectedStatus = event.value;
     order.status = event.value;
-    //console.log(order);
     this.orderService.updateOrder(order)
     .subscribe(() => {
       this.orders;
