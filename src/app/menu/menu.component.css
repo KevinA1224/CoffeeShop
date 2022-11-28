@@ -1,5 +1,7 @@
 h1 {
   text-align: center;
+  font-size: 2.5rem;
+  padding: 0.25em 0;
 }
 
 mat-card-title {
@@ -42,13 +44,18 @@ mat-card-title {
   .card .inner {
     margin: auto;
     text-align: center;
-    font-size: large;
+    font-size: 1.8em;
   }
 
+button {
+  padding: 0;
+  margin: 0;
+  background-color: #cb9;
+  width: 5em;
+}
+
 button:hover {
-  color: #2c3a41;
-  background-color: #e6e6e6;
-  left: .1em;
+  color: #555555;
 }
 
 button:active {

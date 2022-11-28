@@ -11,7 +11,9 @@
         <span>{{item.price | currency: 'USD'}}</span>
       </mat-card-content>
       <mat-card-actions class="inner">
-        <button type="button" (click)="onSelect(item)" [class.selected]="item === selectedItem">+</button>
+        <button type="button" (click)="onSelect(item)" [class.selected]="item === selectedItem">
+          <mat-icon aria-hidden="false" aria-label="Add icon" fontIcon="add">add</mat-icon>
+        </button>
       </mat-card-actions>
     </mat-card>
   </div>

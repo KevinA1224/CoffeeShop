@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { MenuItem } from './MenuItem';
-// import { MENUITEMS } from './mock-menu-items';
 import { Observable, of } from 'rxjs';
 import { MessageService } from './message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';

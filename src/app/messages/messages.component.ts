@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MessageService } from '../message.service';
 import { OrderService } from '../order.service';
-import { OrderItem } from '../OrderItem';
-import { OrdersComponent } from '../orders/orders.component';
+import { MatSnackBar, MatSnackBarRef} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-messages',
@@ -11,11 +10,15 @@ import { OrdersComponent } from '../orders/orders.component';
 })
 export class MessagesComponent implements OnInit {
 
+  annotationTimer: number = 3;
+
   orders = this.messageService.orders;
+  displayedColumns: string[] = ['item', 'price'];
 
   constructor(
     public messageService: MessageService,
-    private orderService: OrderService) { }
+    private orderService: OrderService,
+    private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
   }
@@ -26,6 +29,7 @@ export class MessagesComponent implements OnInit {
       this.orders.push(order);
     });
     this.messageService.resetOutput();
+    this.snackBar.open('Your order has been sent!', 'Close');
   }
 
 }

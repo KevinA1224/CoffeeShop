@@ -3,6 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule} from '@angular/common/http';
 import { MatSelectModule} from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
+import { MatTableModule} from '@angular/material/table';
+import { MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,7 +35,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ),
     BrowserAnimationsModule,
     MatSelectModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule,
+    MatSnackBarModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
