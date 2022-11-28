@@ -13,8 +13,7 @@ export class MessageService {
   messages: MenuItem[] = [];
   orders: OrderItem[] = [];
   total: number = 0;
-  tmpItemList: string[] = [];
-  orderID: number = 0;
+  orderID: number = 8; // starting from last ID from the mockup data server
 
   add(message: MenuItem) {
     this.messages.push(message);
@@ -26,7 +25,6 @@ export class MessageService {
   }
 
   resetOutput(): void {
-    this.tmpItemList = [];
     this.orderID += 1;
     this.messages = [];
   }
@@ -40,10 +38,7 @@ export class MessageService {
   }
 
   output(){
-    this.messages.forEach((message) => {
-      this.tmpItemList.push(message.name); 
-    });
-    return {id: this.orderID, itemList: this.tmpItemList, total: this.total, status: 'Open'};
+    return {id: this.orderID, itemList: this.messages, total: this.total, status: 'Open'};
   }
 
 

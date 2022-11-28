@@ -8,7 +8,10 @@
       </mat-card-header>
       <mat-card-content>
         <div class="items">
-          <span *ngFor="let item of order.itemList">{{item}}&nbsp;</span>
+          <div *ngFor="let item of order.itemList">
+            <span>{{item.name}}&nbsp;</span>
+            <span>{{item.price | currency: 'USD'}}</span>
+          </div>
         </div><hr>
         <span>Total: {{order.total | currency: 'USD'}}</span>
       </mat-card-content>

@@ -2,6 +2,10 @@ h1 {
   text-align: center;
 }
 
+mat-card-title {
+  font-weight: bold;
+}
+
 .content {
   padding: 1em;
   margin: auto;
@@ -17,7 +21,7 @@ h1 {
 }
 
 .card {
-  background-color: #fff;
+  background-color: #fec;
   margin: 1rem .5rem;
   border-radius: 2px;
   padding: 1rem;
@@ -26,8 +30,8 @@ h1 {
   color: #000;
   text-align: left;
   width: 100%;
-  min-width: 200px;
-  max-width: 350px;
+  min-width: 180px;
+  max-width: 200px;
   box-sizing: border-box;
 
   order: 0;
