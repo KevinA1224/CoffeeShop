@@ -1,0 +1,30 @@
+.card {
+  background-color: #fff;
+  margin: auto;
+  border-radius: 2px;
+  padding: 1rem;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  color: #000;
+  text-align: left;
+  width: 100%;
+  min-width: 300px;
+  max-width: 350px;
+  box-sizing: border-box;
+
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+button:hover {
+  color: #2c3a41;
+  background-color: #e6e6e6;
+  left: .1em;
+}
+
+button:active {
+  background-color: #525252;
+  color: #fafafa;
+}

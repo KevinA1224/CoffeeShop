@@ -2,52 +2,18 @@ h1 {
     text-align: center;
   }
   
-  .orders {
-    padding: 1em;
-    margin: auto;
-    max-width: 1000px;
-  
-    /* flexbox */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: flex-start;
-    align-items: flex-start;
-  }
-  
-  .card {
-    background-color: #ddd;
-    border-radius: 2px;
-    padding: 1.5rem;
-    text-decoration: none;
-    display: inline-block;
-    color: #000;
-    text-align: left;
-    width: 100%;
-    min-width: 100px;
-    max-width: 200px;
-    margin: 1rem .5rem;
-    box-sizing: border-box;
-  
-    /* flexbox */
-    order: 0;
-    flex: 0 1 auto;
-    align-self: auto;
-  }
+.orders {
+  padding: 1em;
+  margin: auto;
+  max-width: 1000px;
 
-  .items {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    align-items: flex-start;
-    overflow: auto;
-  }
-  
-  .card:hover {
-    background-color: #eee;
-  }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: flex-start;
+  align-items: flex-start;
+}
 
   .orders .Open {
     background-color: #fefefe;
@@ -60,3 +26,36 @@ h1 {
   .orders .Closed {
     background-color: rgb(180, 230, 170);
   }
+
+.card {
+  border-radius: 2px;
+  padding: 1.5rem;
+  text-decoration: none;
+  display: inline-block;
+  color: #000;
+  text-align: left;
+  width: 100%;
+  min-width: 100px;
+  max-width: 200px;
+  margin: 1rem .5rem;
+  box-sizing: border-box;
+
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+  .card:hover {
+    background-color: #eee;
+  }
+
+.items {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: flex-start;
+  overflow: auto;
+}
+  
+  

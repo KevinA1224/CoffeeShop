@@ -1,19 +1,20 @@
-<h2>Our Menu</h2>
-<div class="content">
-  <ul class="items">
-    <li *ngFor="let item of items">
-
-      <div class="mitems">
-        <span class="badge">{{item.id}}</span>
-        <span class="name">{{item.name}}</span>
-        <span class="price">{{item.price | currency: 'USD'}}</span>
-        <button type="button" (click)="onSelect(item)" [class.selected]="item === selectedItem">Select</button>
-      </div>
-
-    </li>
-  </ul>
-
-  <app-menu-items [item]="selectedItem"></app-menu-items>
+<h1>Our Menu</h1>
+<div class="content"> 
+  <div *ngFor="let item of items">  
+    <mat-card class="card">
+      <mat-card-header>
+        <mat-card-title>{{item.name}}</mat-card-title>
+        <!-- <mat-card-subtitle class="badge">{{item.id}}</mat-card-subtitle> -->
+      </mat-card-header>
+      <mat-card-content class="inner">
+        <span>{{item.name}}&nbsp;</span>
+        <span>{{item.price | currency: 'USD'}}</span>
+      </mat-card-content>
+      <mat-card-actions class="inner">
+        <button type="button" (click)="onSelect(item)" [class.selected]="item === selectedItem">+</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <!-- <app-menu-items [item]="selectedItem"></app-menu-items> -->
   <app-messages></app-messages>
-
 </div>

@@ -1,80 +1,64 @@
-.content {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 10px;
+h1 {
+  text-align: center;
 }
 
-.items {
-  margin: 0 0 2em 0;
-  list-style-type: none;
-  padding: 0;
-  width: 20em;
-  }
-  
-  .items li {
-    display: flex;
+.content {
+  padding: 1em;
+  margin: auto;
+  max-width: 1000px;
+
+  /* flexbox */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.card {
+  background-color: #fff;
+  margin: 1rem .5rem;
+  border-radius: 2px;
+  padding: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  color: #000;
+  text-align: left;
+  width: 100%;
+  min-width: 200px;
+  max-width: 350px;
+  box-sizing: border-box;
+
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+  .card .inner {
+    margin: auto;
+    text-align: center;
+    font-size: medium;
   }
 
-  .items .mitemens {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 1px;
-  }
-  
-  .items button {
-    flex: 1;
-    cursor: pointer;
-    position: relative;
-    left: 0;
-    background-color: #EEE;
-    margin: 0.25em;
-    padding: 0.25em;
-    border-radius: 4px;
-    align-items: stretch;
-    height: 1.8em;
-  }
-  
-  .items button:hover {
-    color: #2c3a41;
-    background-color: #e6e6e6;
-    left: .1em;
-  }
-  
-  .items button:active {
-    background-color: #525252;
-    color: #fafafa;
-  }
-  
-  .items button.selected {
-    background-color: black;
-    color: white;
-  }
-  
-  .items button.selected:hover {
-    background-color: #505050;
-    color: white;
-  }
-  
-  .item button.selected:active {
-    background-color: black;
-    color: white;
-  }
-  
-  .items .badge {
-    display: inline-block;
-    font-size: small;
-    color: white;
-    padding: 0.5em 0.5em 0.5em 0.5em;
-    background-color: #405061;
-    line-height: 1em;
-    margin-right: .6em;
-    border-radius: 1em 1em 1em 1em;
-  }
-  
-  .items .name {
-    align-self: center;
-  }
+button:hover {
+  color: #2c3a41;
+  background-color: #e6e6e6;
+  left: .1em;
+}
 
-  .items .price {
-    padding: 0em 0em 0em 0.5em;
-  }
+button:active {
+  background-color: #525252;
+  color: #fafafa;
+}
+
+.badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  background-color: #405061;
+  line-height: 1em;
+  margin-right: .6em;
+  border-radius: 1em 1em 1em 1em;
+}
