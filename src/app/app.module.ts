@@ -13,7 +13,6 @@ import { MatBadgeModule } from '@angular/material/badge';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MenuItemsComponent } from './menu-items/menu-items.component';
 import { MenuComponent } from './menu/menu.component';
 import { MessagesComponent } from './messages/messages.component';
 import { OrdersComponent } from './orders/orders.component';
@@ -24,7 +23,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
-    MenuItemsComponent,
     MenuComponent,
     MessagesComponent,
     OrdersComponent
