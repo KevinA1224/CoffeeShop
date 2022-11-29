@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
-import { COMPOSITION_BUFFER_MODE } from '@angular/forms';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { MenuItem } from './MenuItem';
 
 @Injectable({
   providedIn: 'root',
 })
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
+    //The images of the menu items are license free from the site pixabay (in reality we would probably buy or shoot the pictures ourselves).
+    //In this context, we use the photos mainly for demo purposes.
     const items = [
       {id: 1, name: 'Espresso', price: 3.20, image: './assets/espresso.jpg'},
       {id: 2, name: 'Black Coffee', price: 2.70, image: './assets/black_coffee.jpg'},
@@ -28,14 +28,5 @@ export class InMemoryDataService implements InMemoryDbService {
       {id: 7, itemList: [{id: 1, name: 'Espresso', price: 3.20, image: './assets/espresso.jpg'}], total: 3.20, status: 'Open'}
     ];
     return {items, orders};
-  }
-
-  // Overrides the genId method to ensure that a hero always has an id.
-  // If the heroes array is empty,
-  // the method below returns the initial number (11).
-  // if the heroes array is not empty, the method below returns the highest
-  // hero id + 1.
-  genId(items: MenuItem[]): number {
-    return items.length > 0 ? Math.max(...items.map(item => item.id)) + 1 : 11;
   }
 }

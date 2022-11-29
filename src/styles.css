@@ -1,10 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 h1 {
-    color: rgb(116, 77, 0);
-    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    background-color: rgba(0,0,0, 0.5);
+    border-radius: 2px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    box-shadow: #ffffff;
     text-align: center;
-    font-size: 2.5rem;
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: .25px;
+    width: 100%;
+    margin: 0 .5em 0 0;
     padding: 1em 0;
+    box-sizing: border-box;
 }
 
 h2, h3 {
@@ -51,6 +59,19 @@ button:disabled {
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+mat-drawer-content {
+  background-image: url('/../assets/coffee_shop_blur.jpg');
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
