@@ -4,7 +4,7 @@ import { MenuComponent } from './menu/menu.component';
 import { OrdersComponent } from './orders/orders.component';
 
 const routes: Routes = [
-  //{ path: '', redirectTo: '/orders', pathMatch: 'full' }, // add default path if needed
+  { path: '', redirectTo: '/menu', pathMatch: 'full' }, // add default path if needed
   { path: 'menu', component: MenuComponent},
   { path: 'orders', component: OrdersComponent}
 ];
