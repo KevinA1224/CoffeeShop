@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MenuItem } from '../MenuItem';
 import { MenuService } from '../menu.service';
 import { MessageService } from '../message.service';

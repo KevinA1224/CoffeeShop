@@ -1,9 +1,21 @@
-<mat-toolbar>
-  <span>{{title}}</span>
-  <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="coffee">coffee</mat-icon>
-</mat-toolbar>
-<nav>
-    <a routerLink="/menu">Our Menu</a>
-    <a routerLink="/orders">Manage Orders</a>
-</nav>
-<router-outlet></router-outlet>
+<mat-drawer-container>
+  <mat-drawer #drawer mode="over">
+    <app-messages></app-messages>
+  </mat-drawer>
+  <mat-drawer-content>
+    <mat-toolbar class="fixed">
+      <span>{{title}}</span>
+      <mat-icon aria-hidden="false" aria-label="Coffee logo" fontIcon="coffee">coffee</mat-icon>
+      <span class="spacer"></span>
+      <button mat-raised-button (click)="drawer.toggle()">
+        <mat-icon aria-hidden="false" aria-label="Cart" fontIcon="shopping_cart">shopping_cart</mat-icon>
+      </button>
+    </mat-toolbar>
+    <nav>
+      <a routerLink="/menu">Our Menu</a>
+      <a routerLink="/orders">Manage Orders</a>
+    </nav>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
+

@@ -4,21 +4,21 @@
     <mat-card class="card">
       <mat-card-header>
         <mat-card-title>{{item.name}}</mat-card-title>
-        <!-- <mat-card-subtitle class="badge">{{item.id}}</mat-card-subtitle> -->
       </mat-card-header>
       <img mat-card-image src={{item.image}} alt="Image of Menu Item">
       <mat-card-content class="inner">
         <span>{{item.price | currency: 'USD'}}</span>
       </mat-card-content>
       <mat-card-actions class="inner">
-        <button type="button" (click)="onSelect(item)" [class.selected]="item === selectedItem">
+        <button class="item-button" type="button" (click)="onSelect(item)" [class.selected]="item === selectedItem">
           <mat-icon aria-hidden="false" aria-label="Add icon" fontIcon="add">add</mat-icon>
         </button>
       </mat-card-actions>
     </mat-card>
   </div>
+</div>
+
   <!-- <app-menu-items [item]="selectedItem"></app-menu-items> -->
-</div>
-<div class="content">
+<!-- <div class="content">
   <app-messages></app-messages>
-</div>
+</div> -->

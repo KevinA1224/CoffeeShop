@@ -4,8 +4,20 @@ h1 {
   padding: 0.25em 0;
 }
 
+mat-toolbar {
+  background-color: #614901;
+  color: #fff;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+}
+
 mat-card-title {
   font-weight: bold;
+}
+
+.spacer {
+  flex: 1 1;
 }
 
 .content {
@@ -35,10 +47,6 @@ mat-card-title {
   min-width: 180px;
   max-width: 200px;
   box-sizing: border-box;
-
-  order: 0;
-  flex: 0 1 auto;
-  align-self: auto;
 }
 
   .card .inner {
@@ -47,11 +55,14 @@ mat-card-title {
     font-size: 1.8em;
   }
 
-button {
+.item-button {
   padding: 0;
   margin: 0;
-  background-color: #cb9;
   width: 5em;
+}
+
+button {
+  background-color: #cb9;
 }
 
 button:hover {
@@ -63,13 +74,3 @@ button:active {
   color: #fafafa;
 }
 
-.badge {
-  display: inline-block;
-  font-size: small;
-  color: white;
-  padding: 0.5em 0.5em 0.5em 0.5em;
-  background-color: #405061;
-  line-height: 1em;
-  margin-right: .6em;
-  border-radius: 1em 1em 1em 1em;
-}
