@@ -1,0 +1,24 @@
+<mat-drawer-container>
+  <mat-drawer #drawer mode="over">
+    <app-messages></app-messages>
+  </mat-drawer>
+  <mat-drawer-content>
+    <mat-toolbar class="fixed">
+      <mat-icon aria-hidden="false" aria-label="Coffee logo" fontIcon="coffee">coffee</mat-icon>
+      <span>{{title}}</span>
+      <span class="spacer"></span>
+      <button mat-raised-button><a routerLink="/menu"><mat-icon aria-hidden="false" aria-label="Coffee Menu" fontIcon="restaurant_menu">restaurant_menu</mat-icon></a></button>
+      <button mat-raised-button><a routerLink="/orders"><mat-icon aria-hidden="false" aria-label="Orders" fontIcon="assignment">assignment</mat-icon></a></button>
+      <button mat-raised-button (click)="drawer.toggle()">
+        <mat-icon matBadge={{messageService.messages.length}} matBadgeColor="warn" matBadgeOverlap="false"
+        aria-hidden="false" aria-label="Cart" fontIcon="shopping_cart">shopping_cart</mat-icon>
+      </button>
+    </mat-toolbar>
+<!--     <nav>
+      <a routerLink="/menu">Our Menu</a>
+      <a routerLink="/orders">Manage Orders</a>
+    </nav> -->
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
+

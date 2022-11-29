@@ -1,0 +1,71 @@
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 0.25em 0;
+  }
+  
+.orders {
+  padding: 1em;
+  margin: auto;
+  max-width: 1000px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+  .orders .Open {
+    background-color: #fefefe;
+  }
+
+  .orders .Processing {
+    background-color: #faefdf;
+  }
+
+  .orders .Closed {
+    background-color: #d4ffca;
+  }
+
+.card {
+  border-radius: 2px;
+  padding: 1.5rem;
+  text-decoration: none;
+  display: inline-block;
+  color: #000;
+  text-align: left;
+  width: 100%;
+  min-width: 180px;
+  max-width: 240px;
+  margin: 1rem .5rem;
+  box-sizing: border-box;
+}
+
+  .card:hover {
+    background-color: #eee;
+  }
+  
+.items {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: flex-start;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+}
+
+.price {
+  text-align: right;
+}
+
+.name {
+  text-align: left;
+}
+  
+  

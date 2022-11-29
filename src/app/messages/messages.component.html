@@ -1,0 +1,41 @@
+<div>
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>Your Order</mat-card-title>
+    </mat-card-header>
+    <mat-card-content *ngIf="messageService.messages.length">
+      <table *ngIf="messageService.messages">
+        <tr *ngFor='let message of messageService.messages'>
+          <th>
+            <div class="name">{{message.name}}</div>
+          </th>
+          <th>
+            <div class="price">{{message.price | currency: 'USD'}}</div>
+          </th>
+        </tr>
+        <tr>
+          <th></th>
+          <th><hr></th>
+        </tr>
+        <tr>
+          <th>
+            <div class="name">Total:</div>
+          </th>
+          <th>
+            <div class="price">{{messageService.total | currency: 'USD'}}</div>
+          </th>
+        </tr>
+      </table>
+    </mat-card-content>
+    <mat-card-actions *ngIf="messageService.messages.length">
+      <div class="btn-container">
+        <button type="button" class="clear" (click)="messageService.clear()">
+          <mat-icon aria-hidden="false" aria-label="Delete icon" fontIcon="delete">delete</mat-icon>
+        </button>
+        <button type="button" (click)="addOrder()">Confirm</button>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+
