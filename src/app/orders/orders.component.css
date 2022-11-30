@@ -7,6 +7,7 @@ h1 {
 .orders {
   padding: 1em;
   margin: auto;
+  margin-top: 6em;
   max-width: 1000px;
 
   display: flex;

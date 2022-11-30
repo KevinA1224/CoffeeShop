@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { MenuItem } from './MenuItem';
 import { OrderItem } from './OrderItem';
-import { MatTable } from '@angular/material/table';
 
 
 @Injectable({
@@ -9,8 +8,8 @@ import { MatTable } from '@angular/material/table';
 })
 export class MessageService {
 
-  messages: MenuItem[] = [];
-  orders: OrderItem[] = [];
+  messages: MenuItem[] = []; //saving selected Items temporarily
+  orders: OrderItem[] = []; //provides orders so that both orders and message component can access it
   total: number = 0;
   orderID: number = 8; // starting from last ID from the mockup data server
 

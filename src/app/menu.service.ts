@@ -13,7 +13,6 @@ export class MenuService {
   getMenuItems(): Observable<MenuItem[]> {
     return this.http.get<MenuItem[]>(this.menuUrl)
     .pipe(
-      //tap(_ => this.log('fetched items')),
       catchError(this.handleError<MenuItem[]>('getMenuItems', []))
     );
   }
@@ -21,26 +20,16 @@ export class MenuService {
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
   
-      // TODO: send the error to remote logging infrastructure
-      console.error(error); // log to console instead
+      console.error(error);
   
-      // TODO: better job of transforming error for user consumption
-      //this.log(`${operation} failed: ${error.message}`);
-  
-      // Let the app keep running by returning an empty result.
       return of(result as T);
     };
   }
 
   private menuUrl = 'api/items';
 
-  /* private log(message: MenuItem) {
-    this.messageService.add(`MenuItemService: ${message}`);
-  } */
+  constructor(private http: HttpClient) { }
 
-  constructor(
-    private http: HttpClient,
-    private messageService: MessageService) { }
 }
 
 

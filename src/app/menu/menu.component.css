@@ -23,7 +23,10 @@ mat-card-title {
 .content {
   padding: 1em;
   margin: auto;
+  margin-top: 6em;
   max-width: 1000px;
+  overflow: auto;
+  max-height: 100%;
 
   display: flex;
   flex-direction: row;
